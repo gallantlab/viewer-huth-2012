@@ -6,9 +6,8 @@
 <title>Huth et al. 2012 brain viewer | Gallant Lab</title>
 <style>
   html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  .gl-bar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 99999;
-    background: #1a1a1a; border-bottom: 1px solid #333;
+  body { display: flex; flex-direction: column; }
+  .gl-bar { flex: 0 0 auto; background: #1a1a1a; border-bottom: 1px solid #333;
     box-shadow: 0 2px 8px rgba(0,0,0,0.4); font-size: 13px;
   }
   .gl-bar .gl-row1 { height: 44px; display: flex; align-items: center; padding: 0 16px; }
@@ -28,11 +27,7 @@
   .gl-bar .gl-home { font-weight: 700; margin-right: 16px; }
   .gl-bar nav { display: flex; gap: 2px; flex: 1; }
   .gl-bar nav a { font-weight: 500; }
-  iframe {
-    position: fixed; left: 0; right: 0; bottom: 0;
-    width: 100%; border: 0;
-  }
-  iframe { top: 78px; height: calc(100% - 78px); }
+  iframe { flex: 1 1 auto; min-height: 0; width: 100%; border: 0; display: block; }
 </style>
 </head>
 <body>
